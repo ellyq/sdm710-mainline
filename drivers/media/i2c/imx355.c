@@ -1725,16 +1725,7 @@ static struct imx355_hwcfg *imx355_get_hwcfg(struct device *dev, struct imx355 *
 	if (!cfg)
 		goto out_err;
 
-	if (imx355->mclk) {
-		cfg->ext_clk = clk_get_rate(imx355->mclk);
-	} else {
-		ret = fwnode_property_read_u32(dev_fwnode(dev), "clock-frequency",
-					       &cfg->ext_clk);
-		if (ret) {
-			dev_err(dev, "can't get clock frequency");
-			goto out_err;
-		}
-	}
+	cfg->ext_clk = clk_get_rate(imx355->mclk);
 
 	dev_dbg(dev, "ext clk: %d", cfg->ext_clk);
 	if (cfg->ext_clk != IMX355_EXT_CLK) {
@@ -1795,7 +1786,7 @@ static int imx355_probe(struct i2c_client *client)
 		goto error_probe;
 	}
 
-	imx355->mclk = devm_clk_get_optional(&client->dev, "mclk");
+	imx355->mclk = devm_v4l2_sensor_clk_get(&client->dev, "mclk");
 	if (IS_ERR(imx355->mclk)) {
 		ret = dev_err_probe(&client->dev, PTR_ERR(imx355->mclk),
 				    "failed to get mclk");
