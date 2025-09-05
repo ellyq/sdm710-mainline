@@ -3349,9 +3349,9 @@
 					output-low;
 				};
 
-				2-gpios-pins {
+				tx-pins {
 					pins = "gpio20";
-					function = "pdm_2_gpios";
+					function = "pdm_tx";
 					drive-strength = <8>;
 				};
 
@@ -3370,16 +3370,30 @@
 			};
 
 			cdc_dmic_default: cdc-dmic-default-state {
-				1-2-pins {
-					pins = "gpio26", "gpio28";
-					function = "dmic12";
+				clk1-pins {
+					pins = "gpio26";
+					function = "dmic1_clk";
 					drive-strength = <8>;
 					output-high;
 				};
 
-				3-4-pins {
+				clk2-pins {
+					pins = "gpio28";
+					function = "dmic2_clk";
+					drive-strength = <8>;
+					output-high;
+				};
+
+				data1-pins {
 					pins = "gpio27", "gpio29";
-					function = "dmic34";
+					function = "dmic1_data";
+					drive-strength = <8>;
+					input-enable;
+				};
+
+				data2-pins {
+					pins = "gpio29";
+					function = "dmic2_data";
 					drive-strength = <8>;
 					input-enable;
 				};
