@@ -1900,7 +1900,7 @@ static struct i2c_driver imx355_i2c_driver = {
 	.driver = {
 		.name = "imx355",
 		.acpi_match_table = ACPI_PTR(imx355_acpi_ids),
-		.of_match_table = of_match_ptr(imx355_match_table),
+		.of_match_table = imx355_match_table,
 		.pm = &imx355_pm_ops,
 	},
 	.probe = imx355_probe,
