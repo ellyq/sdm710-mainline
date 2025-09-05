@@ -21,14 +21,16 @@ enum lpass_lpi_functions {
 	LPI_MUX_sec_tdm_dout,
 
 	LPI_MUX_comp_rx,
-	LPI_MUX_dmic12,
-	LPI_MUX_dmic34,
+	LPI_MUX_dmic1_clk,
+	LPI_MUX_dmic1_data,
+	LPI_MUX_dmic2_clk,
+	LPI_MUX_dmic2_data,
 	LPI_MUX_lpi_cdc_rst,
 	LPI_MUX_mclk0,
-	LPI_MUX_pdm_2_gpios,
 	LPI_MUX_pdm_clk,
 	LPI_MUX_pdm_rx,
 	LPI_MUX_pdm_sync,
+	LPI_MUX_pdm_tx,
 
 	LPI_MUX_gpio,
 	LPI_MUX__,
@@ -74,14 +76,16 @@ static const char *sec_tdm_din_groups[] = { "gpio10" };
 static const char *sec_tdm_dout_groups[] = { "gpio11" };
 
 static const char *comp_rx_groups[] = { "gpio22", "gpio24" };
-static const char *dmic12_groups[] = { "gpio26", "gpio28" };
-static const char *dmic34_groups[] = { "gpio27", "gpio29" };
+static const char *dmic1_clk_groups[] = { "gpio26" };
+static const char *dmic1_data_groups[] = { "gpio27" };
+static const char *dmic2_clk_groups[] = { "gpio28" };
+static const char *dmic2_data_groups[] = { "gpio29" };
 static const char *lpi_cdc_rst_groups[] = { "gpio29" };
 static const char *mclk0_groups[] = { "gpio19" };
-static const char *pdm_2_gpios_groups[] = { "gpio20" };
 static const char *pdm_clk_groups[] = { "gpio18" };
 static const char *pdm_rx_groups[] = { "gpio21", "gpio23", "gpio25" };
 static const char *pdm_sync_groups[] = { "gpio19" };
+static const char *pdm_tx_groups[] = { "gpio20" };
 
 const struct lpi_pingroup sdm670_lpi_pinctrl_groups[] = {
 	LPI_PINGROUP(0, LPI_NO_SLEW, _, _, _, _),
@@ -107,16 +111,16 @@ const struct lpi_pingroup sdm670_lpi_pinctrl_groups[] = {
 
 	LPI_PINGROUP(18, LPI_NO_SLEW, _, pdm_clk, _, _),
 	LPI_PINGROUP(19, LPI_NO_SLEW, mclk0, _, pdm_sync, _),
-	LPI_PINGROUP(20, LPI_NO_SLEW, _, pdm_2_gpios, _, _),
+	LPI_PINGROUP(20, LPI_NO_SLEW, _, pdm_tx, _, _),
 	LPI_PINGROUP(21, LPI_NO_SLEW, _, pdm_rx, _, _),
 	LPI_PINGROUP(22, LPI_NO_SLEW, _, comp_rx, _, _),
 	LPI_PINGROUP(23, LPI_NO_SLEW, pdm_rx, _, _, _),
 	LPI_PINGROUP(24, LPI_NO_SLEW, comp_rx, _, _, _),
 	LPI_PINGROUP(25, LPI_NO_SLEW, pdm_rx, _, _, _),
-	LPI_PINGROUP(26, LPI_NO_SLEW, dmic12, _, _, _),
-	LPI_PINGROUP(27, LPI_NO_SLEW, dmic34, _, _, _),
-	LPI_PINGROUP(28, LPI_NO_SLEW, dmic12, _, _, _),
-	LPI_PINGROUP(29, LPI_NO_SLEW, dmic34, lpi_cdc_rst, _, _),
+	LPI_PINGROUP(26, LPI_NO_SLEW, dmic1_clk, _, _, _),
+	LPI_PINGROUP(27, LPI_NO_SLEW, dmic1_data, _, _, _),
+	LPI_PINGROUP(28, LPI_NO_SLEW, dmic2_clk, _, _, _),
+	LPI_PINGROUP(29, LPI_NO_SLEW, dmic2_data, lpi_cdc_rst, _, _),
 
 	LPI_PINGROUP(30, LPI_NO_SLEW, _, _, _, _),
 	LPI_PINGROUP(31, LPI_NO_SLEW, _, _, _, _),
@@ -128,11 +132,13 @@ const struct lpi_function sdm670_lpi_pinctrl_functions[] = {
 	LPI_FUNCTION(sec_tdm_dout),
 
 	LPI_FUNCTION(comp_rx),
-	LPI_FUNCTION(dmic12),
-	LPI_FUNCTION(dmic34),
+	LPI_FUNCTION(dmic1_clk),
+	LPI_FUNCTION(dmic1_data),
+	LPI_FUNCTION(dmic2_clk),
+	LPI_FUNCTION(dmic2_data),
 	LPI_FUNCTION(lpi_cdc_rst),
 	LPI_FUNCTION(mclk0),
-	LPI_FUNCTION(pdm_2_gpios),
+	LPI_FUNCTION(pdm_tx),
 	LPI_FUNCTION(pdm_clk),
 	LPI_FUNCTION(pdm_rx),
 	LPI_FUNCTION(pdm_sync),
