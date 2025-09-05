@@ -47,11 +47,12 @@ $defs:
           List of gpio pins affected by the properties specified in this
           subnode.
         items:
-          pattern: "^gpio([0-9]|1[0-9]|2[0-6])$"
+          pattern: "^gpio([0-9]|1[0-9]|2[0-9]|3[0-1])$"
 
       function:
-        enum: [ gpio, comp_rx, dmic12, dmic34, lpi_cdc_rst, mclk0, pdm_2_gpios,
-                pdm_clk, pdm_rx, pdm_sync, sec_tdm, sec_tdm_din, sec_tdm_dout ]
+        enum: [ gpio, comp_rx, dmic1_clk, dmic1_data, dmic2_clk, dmic2_data,
+                lpi_cdc_rst, mclk0, pdm_tx, pdm_clk, pdm_rx, pdm_sync, sec_tdm,
+                sec_tdm_din, sec_tdm_dout ]
         description:
           Specify the alternative function to be configured for the specified
           pins.
