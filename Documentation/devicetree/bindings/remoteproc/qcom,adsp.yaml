@@ -24,6 +24,7 @@ properties:
       - qcom,msm8998-adsp-pas
       - qcom,msm8998-slpi-pas
       - qcom,sdm660-adsp-pas
+      - qcom,sdm660-cdsp-pas
       - qcom,sdm670-adsp-pas
       - qcom,sdm670-cdsp-pas
       - qcom,sdm845-adsp-pas
@@ -72,6 +73,7 @@ allOf:
               - qcom,msm8998-adsp-pas
               - qcom,msm8998-slpi-pas
               - qcom,sdm660-adsp-pas
+              - qcom,sdm660-cdsp-pas
               - qcom,sdm670-adsp-pas
               - qcom,sdm670-cdsp-pas
               - qcom,sdm845-adsp-pas
@@ -99,6 +101,7 @@ allOf:
               - qcom,msm8998-adsp-pas
               - qcom,msm8998-slpi-pas
               - qcom,sdm660-adsp-pas
+              - qcom,sdm660-cdsp-pas
               - qcom,sdm670-adsp-pas
               - qcom,sdm670-cdsp-pas
               - qcom,sdm845-adsp-pas
@@ -131,6 +134,7 @@ allOf:
               - qcom,msm8996-adsp-pil
               - qcom,msm8998-adsp-pas
               - qcom,sdm660-adsp-pas
+              - qcom,sdm660-cdsp-pas
     then:
       properties:
         power-domains:
@@ -187,6 +191,7 @@ allOf:
               - qcom,msm8998-adsp-pas
               - qcom,msm8998-slpi-pas
               - qcom,sdm660-adsp-pas
+              - qcom,sdm660-cdsp-pas
     then:
       properties:
         qcom,qmp: false
