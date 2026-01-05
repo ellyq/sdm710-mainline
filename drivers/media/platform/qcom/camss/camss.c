@@ -3638,8 +3638,9 @@ static int camss_of_parse_ports(struct camss *camss)
 
 		remote = of_graph_get_remote_port_parent(node);
 		if (!remote) {
-			dev_dbg(dev, "Skipping endpoint due to missing remote port\n");
-			continue;
+			dev_err(dev, "Cannot get remote parent\n");
+			ret = -EINVAL;
+			goto err_cleanup;
 		}
 
 		csd = v4l2_async_nf_add_fwnode(&camss->notifier,
