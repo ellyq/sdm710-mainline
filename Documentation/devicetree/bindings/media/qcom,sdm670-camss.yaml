@@ -123,6 +123,10 @@ properties:
                 minItems: 1
                 maxItems: 4
 
+            required:
+              - clock-lanes
+              - data-lanes
+
       port@1:
         $ref: /schemas/graph.yaml#/$defs/port-base
         unevaluatedProperties: false
@@ -142,6 +146,10 @@ properties:
                 minItems: 1
                 maxItems: 4
 
+            required:
+              - clock-lanes
+              - data-lanes
+
       port@2:
         $ref: /schemas/graph.yaml#/$defs/port-base
         unevaluatedProperties: false
@@ -160,6 +168,10 @@ properties:
               data-lanes:
                 minItems: 1
                 maxItems: 4
+
+            required:
+              - clock-lanes
+              - data-lanes
 
 required:
   - compatible
