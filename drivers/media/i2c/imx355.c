@@ -1882,7 +1882,7 @@ static const struct acpi_device_id imx355_acpi_ids[] __maybe_unused = {
 };
 MODULE_DEVICE_TABLE(acpi, imx355_acpi_ids);
 
-static const struct of_device_id imx355_match_table[] __maybe_unused = {
+static const struct of_device_id imx355_match_table[] = {
 	{ .compatible = "sony,imx355", },
 	{ /* sentinel */ }
 };
