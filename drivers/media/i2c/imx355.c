@@ -1763,9 +1763,9 @@ static int imx355_probe(struct i2c_client *client)
 				     freq);
 
 	ret = devm_regulator_bulk_get_const(imx355->dev,
-				      ARRAY_SIZE(imx355_supplies),
-				      imx355_supplies,
-				      &imx355->supplies);
+					    ARRAY_SIZE(imx355_supplies),
+					    imx355_supplies,
+					    &imx355->supplies);
 	if (ret) {
 		dev_err_probe(imx355->dev, ret, "could not get regulators");
 		goto error_probe;
