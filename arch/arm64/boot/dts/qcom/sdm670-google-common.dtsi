@@ -813,7 +813,7 @@
 		dvdd-supply = <&cam_front_ldo>;
 		dovdd-supply = <&cam_vio_ldo>;
 
-		pinctrl-0 = <&cam_front_default &cam_mclk2_default>;
+		pinctrl-0 = <&cam_mclk2_default>;
 		pinctrl-names = "default";
 
 		rotation = <270>;
@@ -1301,13 +1301,6 @@
 			drive-strength = <2>;
 			bias-disable;
 		};
-	};
-
-	cam_front_default: cam-front-default-state {
-		pins = "gpio9";
-		function = "gpio";
-		drive-strength = <2>;
-		bias-disable;
 	};
 
 	cs35l36_top_default: cs35l36-top-default-state {
