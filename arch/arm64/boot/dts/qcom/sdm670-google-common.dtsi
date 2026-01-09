@@ -748,7 +748,6 @@
 
 &camss_port1 {
 	camss_endpoint1: endpoint {
-		clock-lanes = <7>;
 		data-lanes = <0 1 2 3>;
 		remote-endpoint = <&cam_front_endpoint>;
 	};
