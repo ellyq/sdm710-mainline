@@ -1141,6 +1141,9 @@
 	vdd-cdc-tx-rx-cx-supply = <&vreg_l1b_0p925>;
 	vdd-micbias-supply = <&vreg_l7b_3p125>;
 
+	qcom,mbhc-vthreshold-low = <75 150 237 437 437>;
+	qcom,mbhc-vthreshold-high = <75 150 237 437 437>;
+
 	qcom,micbias-lvl = <2500>;
 	qcom,micbias1-ext-cap;
 
