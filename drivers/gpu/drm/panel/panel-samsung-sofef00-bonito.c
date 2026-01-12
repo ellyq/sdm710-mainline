@@ -54,9 +54,7 @@ static int sofef00_enable(struct drm_panel *panel)
 {
 	struct sofef00 *ctx = to_sofef00(panel);
 	struct mipi_dsi_device *dsi = ctx->dsi;
-	struct device *dev = &dsi->dev;
 	struct mipi_dsi_multi_context dsi_ctx = { .dsi = dsi };
-	int ret;
 
 	mipi_dsi_dcs_exit_sleep_mode_multi(&dsi_ctx);
 	mipi_dsi_usleep_range(&dsi_ctx, 10000, 11000);
