@@ -3167,10 +3167,6 @@ static int ath10k_htt_rx_extract_amsdu(struct ath10k_hw_params *hw,
 	if (WARN_ON(!skb_queue_empty(amsdu)))
 		return -EINVAL;
 
-	msdu = skb_peek(list);
-	rxd = HTT_RX_BUF_TO_RX_DESC(hw,
-				    (void *)msdu->data - hw->rx_desc_ops->rx_desc_size);
-
 	while ((msdu = __skb_dequeue(list))) {
 		__skb_queue_tail(amsdu, msdu);
 
