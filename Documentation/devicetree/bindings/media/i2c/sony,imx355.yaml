@@ -48,6 +48,10 @@ properties:
         $ref: /schemas/media/video-interfaces.yaml
         unevaluatedProperties: false
 
+        data-lanes:
+          minItems: 4
+          maxItems: 4
+
         required:
           - link-frequencies
 
@@ -97,6 +101,7 @@ examples:
 
             port {
                 cam_front_endpoint: endpoint {
+                    data-lanes = <1 2 3 4>;
                     link-frequencies = /bits/ 64 <360000000>;
                     remote-endpoint = <&camss_endpoint1>;
                 };
