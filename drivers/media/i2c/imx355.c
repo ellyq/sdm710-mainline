@@ -1790,10 +1790,8 @@ static int imx355_probe(struct i2c_client *client)
 	}
 
 	ret = imx355_power_on(imx355->dev);
-	if (ret) {
-		dev_err(imx355->dev, "failed to power on sensor: %d", ret);
+	if (ret)
 		goto error_probe;
-	}
 
 	/* Check module identity */
 	ret = imx355_identify_module(imx355);
