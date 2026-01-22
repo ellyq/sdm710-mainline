@@ -1573,7 +1573,6 @@ static int imx355_power_on(struct device *dev)
 		goto error_disable_clocks;
 	}
 
-	gpiod_set_value_cansleep(imx355->reset_gpio, 1);
 	usleep_range(1000, 2000);
 	gpiod_set_value_cansleep(imx355->reset_gpio, 0);
 	usleep_range(10000, 11000);
