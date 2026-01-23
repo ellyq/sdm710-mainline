@@ -1564,15 +1564,13 @@ static int imx355_power_on(struct device *dev)
 	int ret;
 
 	ret = clk_prepare_enable(imx355->clk);
-	if (ret) {
-		dev_err(dev, "failed to enable clocks: %d\n", ret);
-		return ret;
-	}
+	if (ret)
+		return dev_err_probe(dev, ret, "failed to enable clocks");
 
 	ret = regulator_bulk_enable(ARRAY_SIZE(imx355_supplies),
 				    imx355->supplies);
 	if (ret) {
-		dev_err(dev, "failed to enable regulators: %d\n", ret);
+		dev_err_probe(dev, ret, "failed to enable regulators");
 		goto error_disable_clocks;
 	}
 
