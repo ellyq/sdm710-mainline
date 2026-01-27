@@ -48,9 +48,10 @@ properties:
         $ref: /schemas/media/video-interfaces.yaml
         unevaluatedProperties: false
 
-        data-lanes:
-          minItems: 4
-          maxItems: 4
+        properties:
+          data-lanes:
+            minItems: 4
+            maxItems: 4
 
         required:
           - link-frequencies
