@@ -1,10 +1,6 @@
 // SPDX-License-Identifier: GPL-2.0-only
 /*
- * This driver is solely based on the limited information in downstream code.
- * Any verification with schematics or SDM660 devices would be greatly
- * appreciated.
- *
- * Copyright (c) 2023, Richard Acayan. All rights reserved.
+ * Copyright (c) 2023-2026, Richard Acayan. All rights reserved.
  */
 
 #include <linux/kernel.h>
