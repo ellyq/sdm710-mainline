@@ -183,8 +183,8 @@ config SND_SOC_SDM660_INT
 	select SND_SOC_QDSP6
 	select SND_SOC_QCOM_COMMON
 	help
-	  This adds support for audio on Qualcomm Technologies Inc. SDM660
-	  and SDM670 SoC-based systems.
+	  This adds support for audio on Qualcomm Technologies Inc.
+	  SDM660 and SDM670 SoC-based systems.
 	  Say Y if you want to use audio devices on these SoCs.
 
 config SND_SOC_SDM845
