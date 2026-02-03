@@ -8,8 +8,6 @@ title: Qualcomm SDM670 SoC LPASS LPI TLMM
 
 maintainers:
   - Richard Acayan <mailingradian@gmail.com>
-    # Maybe?
-  - Srinivas Kandagatla <srinivas.kandagatla@linaro.org>
 
 description:
   Top Level Mode Multiplexer pin controller in the Low Power Audio SubSystem
