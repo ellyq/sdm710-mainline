@@ -98,6 +98,7 @@ allOf:
               - qcom,msm8998-adsp-pas
               - qcom,msm8998-slpi-pas
               - qcom,sdm670-adsp-pas
+              - qcom,sdm670-cdsp-pas
               - qcom,sdm845-adsp-pas
               - qcom,sdm845-cdsp-pas
               - qcom,sdm845-slpi-pas
