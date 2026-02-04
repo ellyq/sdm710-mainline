@@ -114,8 +114,9 @@ static int snd_sdm660_int_startup(struct snd_pcm_substream *stream)
 
 		break;
 	default:
-		dev_err(cpu->dev, "unimplemented afe dai\n");
-		return -ENOSYS;
+		dev_err(rtd->dev, "%s: invalid dai id 0x%x\n", __func__,
+			cpu_dai->id);
+		return -EINVAL;
 	}
 
 	return 0;
@@ -161,7 +162,8 @@ static void snd_sdm660_int_shutdown(struct snd_pcm_substream *stream)
 
 		break;
 	default:
-		dev_err(cpu->dev, "unimplemented afe dai\n");
+		dev_err(rtd->dev, "%s: invalid dai id 0x%x\n", __func__,
+			cpu_dai->id);
 		break;
 	}
 }
