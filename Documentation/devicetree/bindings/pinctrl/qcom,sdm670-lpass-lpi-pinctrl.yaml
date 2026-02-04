@@ -68,7 +68,7 @@ examples:
   - |
     lpi_tlmm: pinctrl@62b40000 {
         compatible = "qcom,sdm670-lpass-lpi-pinctrl";
-        reg = <0 0x62b40000 0 0x20000>;
+        reg = <0x62b40000 0x20000>;
         gpio-controller;
         #gpio-cells = <2>;
         gpio-ranges = <&lpi_tlmm 0 0 32>;
