@@ -1019,6 +1019,7 @@
 
 &lpi_tlmm {
 	gpio-reserved-ranges = <0 8>, <12 6>;
+	status = "okay";
 
 	sec_tdm_default: sec-tdm-default-state {
 		misc-pins {
