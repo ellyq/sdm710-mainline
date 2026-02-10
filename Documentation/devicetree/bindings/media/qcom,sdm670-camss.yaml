@@ -116,6 +116,9 @@ properties:
             unevaluatedProperties: false
 
             properties:
+              clock-lanes:
+                maxItems: 1
+
               data-lanes:
                 minItems: 1
                 maxItems: 4
@@ -135,6 +138,9 @@ properties:
             unevaluatedProperties: false
 
             properties:
+              clock-lanes:
+                maxItems: 1
+
               data-lanes:
                 minItems: 1
                 maxItems: 4
@@ -154,6 +160,9 @@ properties:
             unevaluatedProperties: false
 
             properties:
+              clock-lanes:
+                maxItems: 1
+
               data-lanes:
                 minItems: 1
                 maxItems: 4
@@ -296,6 +305,7 @@ examples:
                     reg = <0>;
 
                     csiphy_ep0: endpoint {
+                        clock-lanes = <7>;
                         data-lanes = <0 1 2 3>;
                         remote-endpoint = <&front_sensor_ep>;
                     };
